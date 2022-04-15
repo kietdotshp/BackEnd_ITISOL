@@ -1,0 +1,45 @@
+spring:
+  datasource:
+
+    url: jdbc:oracle:thin:@localhost:1521:sa
+    username: DMM
+    password: 123456
+
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  data:
+    rest:
+      base-path: api
+#  batch:
+#    job:
+#      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+        format_sql: true
+        show_sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: cutetiger98.java@gmail.com
+    password: vkqingjddopedqbw
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: 8001
+
+application:
+  active-account:
+    active-url: "http://localhost:8080/active/"
+
+  applicant-cv-folder: "C:/CV"
+
